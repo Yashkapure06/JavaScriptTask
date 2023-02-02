@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping cart</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1>Shopping Cart</h1>
+    <p>Click on the button to add items to the shopping cart:</p>
+    <p>Apple</p>
+    <button onclick="addItem('Apple')">Add item</button>
+    <p id="apple"></p>
+    <p>Banana</p>
+    <button onclick="addItem('Banana')">Add item</button>
+    <p id="banana"></p>
+    <p>Mango</p>
+    <button onclick="addItem('Mango')">Add item</button>
+    <p id="mango"></p>
+
+    <script>
+        let itemCounts = {
+            "Apple": 0,
+            "Banana": 0,
+            "Mango": 0
+        };
+        function addItem(item) {
+            itemCounts[item]++;
+            if (itemCounts[item] > 0) {
+                document.getElementById(item.toLowerCase()).innerHTML = item + ": " + itemCounts[item];
+            } else {
+                document.getElementById(item.toLowerCase()).innerHTML = "0 " + item;
+            }
+        }
+    </script>
+
+</body>
+</html>
