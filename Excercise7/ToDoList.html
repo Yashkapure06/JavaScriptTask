@@ -1,0 +1,112 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>To-Do List</title>
+  <style>
+    .container {
+      width: 500px;
+      margin: 20px auto;
+    }
+    h1 {
+      text-align: center;
+    }
+    .task-input {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    .task-list {
+      list-style: none;
+      padding: 0;
+    }
+    .task-list li {
+      background-color: lightgray;
+      margin-bottom: 10px;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .remove-task {
+      background-color: red;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>To-Do List</h1>
+    <input type="text" class="task-input" placeholder="Add a task">
+    <ul class="task-list">
+    </ul>
+  </div>
+
+  <script>
+    const taskInput = document.querySelector('.task-input');
+    const taskList = document.querySelector('.task-list');
+
+    taskInput.addEventListener('keypress', function (event) {
+      if (event.key === 'Enter') {
+        const task = taskInput.value;
+        const taskElement = document.createElement('li');
+        taskElement.innerHTML = `${task} <span class="remove-task">X</span>`;
+        taskList.appendChild(taskElement);
+        taskInput.value = '';
+
+        const removeTask = taskElement.querySelector('.remove-task');
+        removeTask.addEventListener('click', function () {
+          taskList.removeChild(taskElement);
+        });
+      }
+    });
+  </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To Do List</title>
+</head>
+<body>
+  <center>
+  <h1>To Do List</h1>
+  <input type="text" class="Enter_Task" placeholder="Enter Task">
+  <button class="Add_Task" onclick="add1()">Add</button>
+  <ul class="task1"></ul>
+</center>
+<script>
+// let a = document.getElementById("Enter_Task");
+// let b = document.getElementById("task1");
+const taskInput = document.querySelector('.Enter_Task');
+const taskList = document.querySelector('.task1');
+function add1()
+{
+    // b.innerHTML= a.value;
+      // const task = a.value;
+      const task = taskInput.value;
+        const taskElement = document.createElement('li');
+        taskElement.innerHTML = `${task}`;
+        taskList.appendChild(taskElement);
+        taskInput.value = '';
+
+        // const removeTask = taskElement.querySelector('.remove-task');
+        // removeTask.addEventListener('click', function () {
+        //   taskList.removeChild(taskElement);
+
+          // const removeTask = taskElement.querySelector('.remove-task');
+        taskElement.addEventListener('click', function () {
+          taskList.removeChild(taskElement);
+        });
+      }
+    
+</script>
+</body>
+</html>
