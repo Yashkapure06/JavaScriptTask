@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise - 7</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+
+    </style>
+</head>
+
+<body>
+    <div>
+        <center>
+            <h1>Exercise</h1>
+            <div class="font">
+                <button onclick="decreaseFontSize()">-</button>
+                <span id="fontsize">16</span>
+                <button onclick="increaseFontSize()">+</button>
+            </div>
+            <br>
+            <br>
+            <select id="font" onchange="changeFont()">
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Arial">Arial</option>
+                <option value="Poppins">Poppins</option>
+                <option value="Roboto">Roboto</option>
+                <option value="Courier New">Courier New</option>
+            </select>
+
+            <br>
+            <br>
+            <button onclick="showSourceCode()">Show Source Code</button>
+            <br>
+            <br>
+
+            <textarea type="text" id="sourcecode" style="display:none;" rows="10" disabled></textarea>
+
+
+
+            <br>
+
+            <div id="text">
+                <h1>Hey There!</h1><p>Lorem ipsum dolor sit amet</p><h2>How Are Your</h2><p>consectetur adipisicing elit.
+                Quisquam, quae.</p>
+            </div>
+        </center>
+    </div>
+
+    <script>
+
+    </script>
+    <script src="./script.js"></script>
+</body>
+
+</html>

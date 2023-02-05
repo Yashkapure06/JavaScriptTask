@@ -1,0 +1,84 @@
+body {
+    background-color: #f1f1f1;
+}
+div {
+    background-color: #fff;
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+h1 {
+    text-align: center;
+    color: #333;
+}
+p {
+    text-align: justify;
+    color: #333;
+}
+.font {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.font button {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+}
+.font button:hover {
+    background-color: #333;
+    color: #fff;
+}
+.font span {
+    margin: 0 10px;
+}
+
+#text{
+    font-size: 16px;
+    border: 3px dashed #333;
+}
+
+select {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+}
+
+select:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+select:focus {
+    outline: none;
+}
+
+select option {
+    background-color: #fff;
+    color: #333;
+}
+
+select option:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+
+textarea{
+    padding: 50px 50px;
+    width: 50%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    flex-wrap: wrap;
+
+}
