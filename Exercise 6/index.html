@@ -1,42 +1,223 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping cart</title>
+    <title>Cart</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f1f1f1;
+        }
+
+        .container {
+          margin-top: 3%;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #app-holder {
+            width: 80%;
+            height: 80%;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #menu-cart {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #menu {
+            width: 50%;
+            height: 100%;
+            border-right: 1px solid #ccc;
+            padding: 20px;
+        }
+
+        #menu h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        #menu-area {
+            width: 100%;
+            height: 100%;
+            overflow-y: auto;
+        }
+
+        button{
+              padding:5px;  
+              background-color: #a1a1a1;
+              border: none;
+              border-radius: 5px;
+              font-size: 1rem;
+              cursor: pointer;
+        }
+        .menu-item {
+            width: 100%;
+            height: 100px;
+            background-color: #f1f1f1;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .menu-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .menu-item .item-text {
+            font-size: 1.2rem;
+        }
+
+        .menu-item .item-price {
+            font-size: 1.2rem;
+        }
+
+        .menu-item .item-btn {
+            width: 100px;
+            height: 40px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        #cart {
+            width: 50%;
+            height: 100%;
+            padding: 20px;
+        }
+
+        #cart h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        #cart-area {
+            width: 100%;
+            height: 100%;
+            overflow-y: auto;
+        }
+
+
+        #cart-list {
+            width: 100%;
+            height: 100%;
+        }
+
+
+        .cart-item {
+            width: 100%;
+            height: 100px;
+            background-color: #f1f1f1;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .cart-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .cart-item .item-text {
+            font-size: 1.2rem;
+        }
+
+        .cart-item .item-price {
+            font-size: 1.2rem;
+        }
+
+        .cart-item .item-btn {
+            width: 100px;
+            height: 40px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        #cart-total {
+            width: 100%;
+            height: 100px;
+            background-color: #f1f1f1;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        h1{
+            text-align: center;
+            margin-top: 5%;
+        }
 
     </style>
 </head>
+
 <body>
-    <h1>Shopping Cart</h1>
-    <p>Click on the button to add items to the shopping cart:</p>
-    <p>Apple</p>
-    <button onclick="addItem('Apple')">Add item</button>
-    <p id="apple"></p>
-    <p>Banana</p>
-    <button onclick="addItem('Banana')">Add item</button>
-    <p id="banana"></p>
-    <p>Mango</p>
-    <button onclick="addItem('Mango')">Add item</button>
-    <p id="mango"></p>
+  <h1>Food Cart</h1>
+    <div class="container">
+        <div id="app-holder">
 
-    <script>
-        let itemCounts = {
-            "Apple": 0,
-            "Banana": 0,
-            "Mango": 0
-        };
-        function addItem(item) {
-            itemCounts[item]++;
-            if (itemCounts[item] > 0) {
-                document.getElementById(item.toLowerCase()).innerHTML = item + ": " + itemCounts[item];
-            } else {
-                document.getElementById(item.toLowerCase()).innerHTML = "0 " + item;
-            }
-        }
-    </script>
+            <div class="" id="menu-cart">
+                <div id="menu">
+                    <h2>Menu</h2>
+                    <div id="menu-area">
+                    </div>
 
+
+
+                </div>
+                <div id="cart">
+                    <h2 class="text-center">Cart</h2>
+                    <div id="cart-area">
+                        <div id="cart-list">
+                        </div>
+
+
+                        <br>
+                        <div id="cart-total">
+                            <div class="cart-item">
+                                <span class="item-text">total</span>
+                                <p class="item-total">₹<span id="total-amount">0</span></p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
